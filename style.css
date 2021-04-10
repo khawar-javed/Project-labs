@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+:root {
+    --success-color: limegreen;
+    --error-color: orangered;
+}
+@keyframes blink {
+    0% { text-shadow: 0 0 15px red; }
+    50% { text-shadow: none; }
+    100% { text-shadow: 0 0 15px blue; }
+}
+
+@-webkit-keyframes blink {
+    0% { text-shadow: 0 0 15px black; }
+    50% { text-shadow: 0 0 0; }
+    100% { text-shadow: 0 0 15px blue; }
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(pic.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(207, 206, 195);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(49, 19, 219, 0.8);
+    width: 450px;
+    left: 5%;
+    position: absolute;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    text-shadow: 2px 2px 8px black;
+        
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    font-family: 'Libre Baskerville', serif;
+    /* text-shadow: 2px 2px 8px blue; */
+    text-shadow: 0 0 3px greenyellow, 0 0 5px #0000FF;
+
+    -webkit-animation: blink 5.0s linear infinite;
+    -moz-animation: blink 5.0s linear infinite;
+    -ms-animation: blink 5.0s linear infinite;
+    -o-animation: blink 5.0s linear infinite;
+    animation: blink 5.0s linear infinite;
+    
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    background-color: lightgray;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: gray;
+}
+
+.form-control.success input {
+    border-color: var(--sucess-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: darkgray;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(49, 19, 219, 0.8);
+    color: black;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
