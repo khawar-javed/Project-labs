@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 :root {
-    --success-color: limegreen;
+    --success-color: darkgreen;
     --error-color: orangered;
 }
 @keyframes blink {
@@ -97,7 +97,7 @@ h1 {
 }
 
 .form-control.success input {
-    border-color: var(--sucess-color);
+    border-color: var(--success-color);
 }
 
 .form-control.error input {

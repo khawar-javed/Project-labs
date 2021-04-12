@@ -19,7 +19,7 @@ function showSuccess(input){
 function checkFields(inputArray){
     inputArray.forEach(function(input){
         if(input.value ===''){
-            showError(input, 'is required');
+            showError(input,`${input.id} is required`);
         }else{
             showSuccess(input);
         }
