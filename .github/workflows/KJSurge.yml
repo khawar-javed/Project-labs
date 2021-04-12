@@ -36,4 +36,4 @@ jobs:
         
       # Deploy App to Surge
       - name: Deploying Project to Surge
-        run: surge ./ kjkjsj.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./ khawar-javed.surge.sh --token ${{ secrets.SURGE_TOKEN }}
