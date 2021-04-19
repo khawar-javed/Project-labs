@@ -11,6 +11,7 @@ function showError(input, message){
     const small = formControl.querySelector('small');
     small.innerText = message;
 }
+
 function showSuccess(input){
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
@@ -69,6 +70,5 @@ form.addEventListener('submit', function(e) {
     checkLength(password,8,20);
     ValidateEmail(email);
     MatchPassword(password,password2);
-    
-
+   
 });
