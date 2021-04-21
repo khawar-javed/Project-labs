@@ -41,7 +41,7 @@ function checkFields(inputArray){
 //Check length for username & password field
 function checkLength(input, min, max){
     if( input.value.length < min ){
-        showError(input,`${getFieldName(input)} enter minimum ${min} characters`);
+        showError(input,`${getFieldName(input)} must be at least ${min} character long`);
     } else if (input.value.length > max){
         showError(input,`${getFieldName(input)} enter maximum ${max} characters`);
     } else {
@@ -52,7 +52,7 @@ function checkLength(input, min, max){
 //Check confirmed password with actual password
 function MatchPassword(input1, input2){
     if ( input1.value !== input2.value ){
-        showError(input2,"Password must be at least 8 character long")
+        showError(input2,"Password not matched");
 
     }
 }
