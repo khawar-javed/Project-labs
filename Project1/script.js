@@ -52,7 +52,7 @@ function checkLength(input, min, max){
 //Check confirmed password with actual password
 function MatchPassword(input1, input2){
     if ( input1.value !== input2.value ){
-        showError(input2,"Password not matched")
+        showError(input2,"Password must be at least 8 character long")
 
     }
 }
