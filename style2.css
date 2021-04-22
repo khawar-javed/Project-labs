@@ -1,48 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
-@keyframes blink {
-    0% { text-shadow: 0 0 15px red; }
-    50% { text-shadow: none; }
-    100% { text-shadow: 0 0 15px blue; }
+html, body {
+    margin: 0;
+    background:linear-gradient(to right,#0f0c29,#302b63,#24243e);
 }
 
-@-webkit-keyframes blink {
-    0% { text-shadow: 0 0 15px yellow; }
-    50% { text-shadow: 0 0 0; }
-    100% { text-shadow: 0 0 15px blue; }
-}
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: url(/Project1/background2.jpg);
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    
-}
-
-
-h1 {
-    margin-bottom: 10px;
-    margin-top: 2%;
-    color: whitesmoke;
+.LandingPage{
     font-family: 'Libre Baskerville', serif;
-    text-shadow: 2px 2px 8px blue;
-    text-shadow: 0 0 3px greenyellow, 0 0 5px #0000FF;
-
-    -webkit-animation: blink 5.0s linear infinite;
-    -moz-animation: blink 5.0s linear infinite;
-    -ms-animation: blink 5.0s linear infinite;
-    -o-animation: blink 5.0s linear infinite;
-    animation: blink 5.0s linear infinite;
+    background: #282c34;
+    background: url(./Project1/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 92vw;
+    height: 89vh;
+    color: whitesmoke;
+    margin: auto;
+    margin-top: 4rem;
+    text-align: center;
     
 }
 
-a, li {
+.List, a  {
+    font-family: 'Open Sans', sans-serif;
     color: white;
     text-decoration: none;
     
