@@ -4,7 +4,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-// Functions for this form
+// Functions for showError & showSuccess
 function showError(input, message){
     const formControl = input.parentElement;
     formControl.className ='form-control error';
