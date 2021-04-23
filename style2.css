@@ -5,19 +5,32 @@ html, body {
     margin: 0;
     background:linear-gradient(to right,#0f0c29,#302b63,#24243e);
 }
+@keyframes blink {
+    0% { text-shadow: 0 0 15px red; }
+    50% { text-shadow: none; }
+    100% { text-shadow: 0 0 15px blue; }
+}
+
+@-webkit-keyframes blink {
+    0% { text-shadow: 0 0 15px orangered; }
+    50% { text-shadow: 0 0 0; }
+    100% { text-shadow: 0 0 15px blue; }
+}
 
 .LandingPage{
     font-family: 'Libre Baskerville', serif;
-    background: #282c34;
+    /* background: #282c34; */
     background: url(./Project1/background2.jpg);
+    border-radius: 25px;
     background-size: cover;
     background-repeat: no-repeat;
     width: 92vw;
-    height: 89vh;
+    height: 85vh;
     color: whitesmoke;
     margin: auto;
     margin-top: 4rem;
     text-align: center;
+
     
 }
 
@@ -25,5 +38,18 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     color: white;
     text-decoration: none;
+    text-align: justify;
     
+}
+h1 {
+    
+    text-shadow: 2px 2px 8px blue;
+    text-shadow: 0 0 3px greenyellow, 0 0 5px #0000FF;
+
+    -webkit-animation: blink 5.0s linear infinite;
+    -moz-animation: blink 5.0s linear infinite;
+    -ms-animation: blink 5.0s linear infinite;
+    -o-animation: blink 5.0s linear infinite;
+    animation: blink 5.0s linear infinite;
+
 }
