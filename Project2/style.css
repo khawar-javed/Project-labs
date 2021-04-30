@@ -33,7 +33,7 @@ body{
 }
 
 .seat {
-    background-color: darkgray;
+    background-color: lightgreen;
     height: 12px;
     width: 15px;
     margin: 3px;
@@ -45,7 +45,7 @@ body{
     background-color: aqua;
 }
 .seat.occupied {
-    background-color: white;
+    background-color: orangered;
 }
 
 .seat:nth-of-type(2){
@@ -65,7 +65,7 @@ body{
     background-color: rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     border-radius: 5px;
-    color: lightgray;
+    color: black;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -118,7 +118,7 @@ button.home {
     background-color: darkgray;
     border: 2px solid darkgray;
     border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(3, 1, 14, 0.8);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
     color: black;
     display: block;
     font-size: 18px;
