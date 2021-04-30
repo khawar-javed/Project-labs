@@ -112,3 +112,21 @@ p.text {
 p.text span {
     color: aqua;
 }
+
+button.home {
+    cursor: pointer;
+    background-color: darkgray;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(3, 1, 14, 0.8);
+    color: black;
+    display: block;
+    font-size: 18px;
+    padding: 5px 100px 5px 100px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
