@@ -34,19 +34,19 @@ body{
 }
 
 .seat {
-    background-color: lightgreen;
-    height: 12px;
+    background-color: #5885AF;
+    height: 15px;
     width: 15px;
-    margin: 3px;
+    margin: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .seat.selected{
-    background-color: aqua;
+    background-color: lightsteelblue;
 }
 .seat.occupied {
-    background-color: orangered;
+    background-color: whitesmoke;
 }
 
 .seat:nth-of-type(2){
@@ -62,7 +62,12 @@ body{
     transform: scale(1.3);
 }
 
-.legend {
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     border-radius: 5px;
@@ -73,24 +78,15 @@ body{
     
 }
 
-.legend li{
+.showcase li{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 10px;
 }
 
-.legend li small {
-    margin-left: 2px;
-}
-
-.legend .seat:not(.occupied):hover {
-    cursor: default;
-    transform: scale(1);
-}
-.container {
-    perspective:  500px;
-    margin-bottom: 30px;
+.showcase li small {
+    margin-left: 3px;
 }
 
 .row {
@@ -104,6 +100,11 @@ body{
     margin: 15px 0;
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.container {
+    perspective:  900px;
+    margin-bottom: 50px;
 }
 
 p.text {
