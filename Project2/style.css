@@ -7,7 +7,6 @@
 body{
     font-family: 'Lato', sans-serif;
     background-image: url(/Project1/background2.jpg);
-    /* background-color: slategray; */
     display: flex;
     flex-direction: column;
     color: white;
@@ -35,8 +34,8 @@ body{
 
 .seat {
     background-color: #5885AF;
-    height: 15px;
-    width: 15px;
+    height: 26px;
+    width: 32px;
     margin: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -95,10 +94,10 @@ body{
 
 .screen {
     background-color: white;
-    height: 70px;
+    height: 120px;
     width: 100%;
-    margin: 15px 0;
-    transform: rotateX(-45deg);
+    margin: 5px 0;
+    transform: rotateX(-48deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
