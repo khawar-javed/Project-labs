@@ -46,11 +46,11 @@ h1 {
 }
 
 .controls .fa-play {
-    color: greenyellow;
+    color: whitesmoke;
 }
 
 .controls .fa-stop {
-    color: orangered;
+    color: whitesmoke;
     margin-right: 10px;
 }
 
