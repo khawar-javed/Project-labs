@@ -16,6 +16,10 @@ body{
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 .movie-container {
     margin: 20px 0;
 }
@@ -104,6 +108,7 @@ body{
 .container {
     perspective:  900px;
     margin-bottom: 50px;
+    margin: 20px;
 }
 
 p.text {
