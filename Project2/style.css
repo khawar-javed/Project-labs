@@ -98,6 +98,8 @@ h3 {
 
 .screen {
     background-color: white;
+    background: url('https://media.giphy.com/media/VzqeGMTTJOQGzr1Itt/giphy.gif');
+    background-repeat: round;
     height: 120px;
     width: 100%;
     margin: 5px 0;
