@@ -67,21 +67,3 @@ p {
 select:focus, input:focus, button:focus {
     outline: 0;
 }
-
-button.home {
-    cursor: pointer;
-    background-color: darkgray;
-    border: 2px solid darkgray;
-    border-radius: 4px;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-    color: black;
-    display: block;
-    font-size: 18px;
-    padding: 5px 100px 5px 100px;
-    margin-top: 20px;
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-}
