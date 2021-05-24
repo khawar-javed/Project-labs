@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: lightgray;
-    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: lightgray; */
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/Project1/background2.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,10 +18,12 @@ body {
 
 h1 {
     color: darkgreen;
+    font-weight: bold;
 }
 
 p {
     text-align: center;
+    color: whitesmoke;
 }
 
 .btn {
@@ -39,9 +43,12 @@ p {
 }
 
 .currency select {
+    /* font-family: 'Roboto', sans-serif; */
     padding: 10px 20px 10px 10px;
     border: 1px solid gray;
     font-size: 16px;
+    font-weight: bolder;
+    color: black;
     background: transparent;
 }
 
@@ -59,11 +66,43 @@ p {
 }
 
 .rate {
-    color: darkgreen;
+    color: whitesmoke;
     font-size: 16px;
-    padding: 0 10px;
+    /* padding: 5px 100px 5px 100px; */
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+label{
+    color: whitesmoke;
+    font-size: 16px;
 }
 
 select:focus, input:focus, button:focus {
     outline: 0;
+}
+
+.btn-1{
+    display: flex;
+    
+}
+    
+button.home, button.project1 {
+    cursor: pointer;
+    background-color: darkgray;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 50px 5px 50px;
+    margin-top: 5px;
+    margin-right: 16px;
+    /* width: 100%; */
+}
+
+a {
+    text-decoration: none;
 }
