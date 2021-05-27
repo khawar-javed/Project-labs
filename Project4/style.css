@@ -83,12 +83,8 @@ select:focus, input:focus, button:focus {
     outline: 0;
 }
 
-.btn-1{
-    display: flex;
     
-}
-    
-button.home, button.project1 {
+button.home {
     cursor: pointer;
     background-color: darkgray;
     border: 2px solid darkgray;
