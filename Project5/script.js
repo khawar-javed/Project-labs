@@ -88,7 +88,7 @@ function updateDOM(inputData = data) {
 
 // Function to format a number as a currency
 function formatCurrency(num) {
-    return '$ ' + (num).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    return 'PKR ' + (num).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
 // Event Listeners
