@@ -13,7 +13,7 @@ function calculate() {
     const currencyTwoCode = currencyTwo.value;
 
     // Send Request to ExchangeRate-API for conversion rates for currency one
-    fetch(`https://v6.exchangerate-api.com/v6/a43d02c063c1303f1c06c071/pair/${currencyOneCode}/${currencyTwoCode}`)
+    fetch(`https://v6.exchangerate-api.com/v6/0a69957f1e4edf7f5b58412f/pair/${currencyOneCode}/${currencyTwoCode}`)
         .then(res => res.json())
         .then(data => {
             console.log(data.conversion_rate);
