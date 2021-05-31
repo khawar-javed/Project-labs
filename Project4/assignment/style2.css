@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    /* background-image: url(BG.jpg); */
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+select {
+    /* font-family: 'Roboto', sans-serif; */
+    padding: 10px 20px 10px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: black;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.element{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    
+            
+}
+
+.currency-rate .rates-text {
+    background-color: darkgrey;
+    border-radius: 10px;
+    height: 450px;
+    width: 23rem;
+    overflow: scroll;
+    /* color: #002c3d; */
+    margin-left: 5px;
+}
