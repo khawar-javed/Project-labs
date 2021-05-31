@@ -58,9 +58,9 @@ function showMillionaires() {
 
 // Function to Calculate the Total Net Worth of All Users
 function calculateTotalNetWorth() {
+    updateDOM();
     const totalWorth = data.reduce(
-        (acc, item) => (acc += item.worth), 0
-    );
+        (acc, item) => (acc += item.worth), 0);
 
     const totalNetWorthElement = document.createElement('div');
     totalNetWorthElement.innerHTML = `<h3>Total Net Worth: <strong>${formatCurrency(totalWorth)}</strong></h3>`;
