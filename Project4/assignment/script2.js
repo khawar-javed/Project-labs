@@ -16,11 +16,11 @@ function exchangeRates() {
 
 function addElement(ratesEnt){
 
-    allRates.innerHTML = ''
+    allRates.innerHTML = '<h3>Country : Conversion Rates</h3>';
     const keys = Object.keys(ratesEnt);
     console.log(typeof keys);
         keys.forEach((key) => {
-            console.log(`${key}: ${ratesEnt[key]}`);
+        console.log(`${key}: ${ratesEnt[key]}`);
         const newDiv = document.createElement("div");
         newDiv.classList.add('element');
         newDiv.innerHTML = `${key} : ${ratesEnt[key]}`;

@@ -35,6 +35,14 @@ h1{
     
 }
 
+h3 {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    
+}
+
 p {
     /* font-family: sans-serif; */
     color: whitesmoke;
