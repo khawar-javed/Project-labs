@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>My Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Pic.JPG" alt="Random User Image">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Landing Page For ‘Cloud Native’ Information</h1>
+        <p>Building tomorrow’s apps faster</p>
+        <button class="apply" id="open">Sign up</button>
+    </header>
+
+    <div class="container">
+        <h2>What Is ‘Cloud Native’ (and Why Does It Matter)?</h2>
+        <p>Cloud computing adoption has accelerated rapidly as technology leaders look to achieve the right mix of on-premise and managed cloud services for various applications and workloads. And this adoption is only expected to increase further; according to IDC, public cloud spending is forecasted to nearly double from $229 billion in 2019 to almost $500 billion in 2023.</p>
+        <p>As cloud computing adoption has increased across IT, a new application classification has also emerged: “cloud native.” As the “cloud native” descriptor appears more and more often in developer conversations and in articles such as, “The challenges of truly embracing cloud native” and “Six steps for making a successful transition to a cloud native architecture,” it’s become such a buzzword that the important distinctions for successful systems and applications are often lost. By designing cloud native solutions from the beginning, businesses can maximize the full potential of the cloud instead of struggling to adapt existing architectures.</p>
+
+        <h2>What Does Cloud Native Mean?</h2>
+        <p>The Linux Foundation offers the following definition: “Cloud native computing uses an open-source software stack to deploy applications as microservices, packaging each part into its own container and dynamically orchestrating those containers to optimize resource utilization.”</p>
+        <p>Analyst Janakiram MSV provided a slightly different description to The New Stack: “Cloud native is a term used to describe container-based environments. Cloud native technologies are used to develop applications built with services packaged in containers, deployed as microservices and managed on elastic infrastructure through agile DevOps processes and continuous delivery workflows.”
+
+            While those technical definitions might be accurate, they also somewhat obscure the forest for the trees. At Streamlio, we believe it’s useful to take a step back from the technical definitions to set the broader context: to be cloud native as a solution is to embody the distinguishing characteristics of the cloud. It’s no longer enough for developers to design systems and applications that simply operate “in the cloud.” Instead, the cloud needs to be a key part of the design process so solutions are optimized from the ground up to leverage that environment.
+            
+            For example, the practice of “lift and shift” to move on-premise IT infrastructure to the cloud in no way results in a cloud native solution. Deploying a solution in the cloud that was originally designed to run in a traditional data center is possible, but generally of limited merit, as you’re simply redeploying the same application and architecture on different infrastructure and likely making it more complicated in the process.</p>
+
+        <h2>Quotes</h2>
+        <ul>
+            <li>Building tomorrow’s apps faster</li>
+            <li>Digital transformation</li>
+            <li>Developers first</li>
+            <li>Cloud-native and multi-cloud</li>
+        </ul>
+
+        <p>Organizations should also carefully avoid designing solutions that are either too narrow or too broad. Designing for too narrow a scenario can make it difficult to accommodate new uses and applications that emerge rapidly in cloud environments, while designing for too many possible needs at the start can lead to over-engineering that delays projects and adds paralyzing and fragile complexity.</p>
+        <p>When choosing a cloud solution, don’t just assume that because a solution comes from a cloud provider it’s the most cloud native option available. Instead, carefully evaluate each application to ensure it meets both your needs and your expectations.</p>
+
+            
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Sign up Form</h3>
+            </div>
+            <div class="modal-content">
+                <p>To sign up for ‘Cloud Native’ Course.</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
