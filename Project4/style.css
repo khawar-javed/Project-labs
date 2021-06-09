@@ -105,6 +105,6 @@ a {
 
 @media(max-width: 696px) {
     .currency select, .currency input, .swap-rate-container, .rate {
-        width: 67%;
+        width: 100%;
     }
 }
