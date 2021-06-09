@@ -102,3 +102,9 @@ button.home {
 a {
     text-decoration: none;
 }
+
+@media(max-width: 800px) {
+    .screen, .controls {
+        width: 90%;
+    }
+}
