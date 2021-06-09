@@ -102,3 +102,21 @@ button.home {
 a {
     text-decoration: none;
 }
+
+@media (max-width: 600px){
+
+    .currency, .currency input,.currency select, .rate, .swap-rate-container {
+        width: 90%;
+    }
+
+    .currency select{
+        padding-inline: center;
+    }
+
+    .currency input{
+        text-align:center;
+        font-size: 16px;
+    }
+    
+
+}
