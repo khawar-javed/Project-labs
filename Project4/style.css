@@ -103,8 +103,8 @@ a {
     text-decoration: none;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 696px) {
     .currency select, .currency input, .swap-rate-container .rate {
-        width: 90%;
+        width: 67%;
     }
 }
