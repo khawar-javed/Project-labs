@@ -104,7 +104,7 @@ a {
 }
 
 @media(max-width: 696px) {
-    .currency select, .currency input, .swap-rate-container .rate {
+    .currency select, .currency input, .swap-rate-container, .rate {
         width: 67%;
     }
 }
