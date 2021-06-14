@@ -98,7 +98,7 @@ input[type="text"]{
 }
 
 .single-meal img{
-    width: 300px;
+    width: 200px;
     margin: 15px;
     border: 4px #fff solid;
     border-radius: 2px;
@@ -136,7 +136,7 @@ input[type="text"]{
 }
 
 .result-heading{
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 @media(max-width: 800px){
