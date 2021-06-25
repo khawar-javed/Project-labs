@@ -6,7 +6,7 @@ const playAgain = document.querySelector(".popupContainer button");
 const popMessage = document.querySelector(".popupContainer h3");
 const notification = document.getElementById("notification");
 const alpha = document.getElementById("alpha");
-wordsDatabase = ["application", "programming", "database", "science"];
+wordsDatabase = ["scientist","song","built","word","spell","value","support","heavy","men","dead","bad","here","street","dream","eventually","original","broad","floating","daily","tool","swimming","mostly","escape","fourth","within","government","somewhere","means","fight","section","longer","clear","creature","situation","who","were","turn","table","sure","sugar","sister","wool"];
 generateRandomWord();
 function generateRandomWord() {
     selectedWord = wordsDatabase[Math.floor(Math.random() * wordsDatabase.length)]
@@ -62,7 +62,7 @@ window.addEventListener("keydown", e => {
     if (correctedones.includes(e.key)) {
         notification.classList.add("show");
         setTimeout(e =>
-            notification.classList.remove("show"), 1000)
+            notification.classList.remove("show"), 2000)
     }
 
     // console.log(e.keyCode);
@@ -115,7 +115,7 @@ playAgain.addEventListener('click', e => {
         if (correctedones.includes(e.target.innerHTML)) {
             notification.classList.add("show");
             setTimeout(e =>
-                notification.classList.remove("show"), 1000)
+                notification.classList.remove("show"), 2000)
         }
 
         if (e.target.classList.contains('button')) {

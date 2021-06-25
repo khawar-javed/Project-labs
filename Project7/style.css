@@ -7,7 +7,7 @@
 
 }
 h1 {
-    color:rgb(41, 255, 255);
+    color:black;
     text-shadow: 2px 2px 10px #122b2c;
     font-size:70px;
     margin-bottom:10px;
@@ -18,11 +18,11 @@ h1 {
 
 
 body {
-    background:rgb(31, 10, 58);
-    color:white;
-    font-family: 'Noto Sans HK', sans-serif;
+    background:#81A1D1;
+    color:black;
+    /* font-family: 'Noto Sans HK', sans-serif;
     font-family: 'Rubik', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif; */
     /* overflow: hidden; */
     text-align: center;
 
@@ -53,7 +53,7 @@ body {
 
 .letters {
     display: flex;
-    border-bottom: 3px solid aqua;
+    border-bottom: 3px solid black;
     display: inline-flex;
     font-size: 20px;
     align-items: center;
@@ -65,10 +65,10 @@ body {
 
 .figureContainer {
     fill:transparent;
-    stroke:rgb(12, 255, 255);
+    stroke:black;
     stroke-width: 4px;
     stroke-linecap: circle;
-    background-color:rgba(175, 153, 150, 0.2);
+    /* background-color:rgba(175, 153, 150, 0.2); */
 
 }
 
@@ -124,12 +124,12 @@ body {
     width:80%;
     
     padding:15px;
-    background:rgb(21, 71, 104);
+    background: transparent;
     transition:transform .3s linear;
 
 }
 .popup button:hover {
-    color:aqua;
+    color:whitesmoke;
 
 }.popup button:active {
     transform:scale(1.1);
