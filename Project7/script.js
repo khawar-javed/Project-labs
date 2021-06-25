@@ -1,133 +1,136 @@
-// Get DOM Elements
-const word = document.getElementById('word');
-const incorrectLetters = document.getElementById('incorrect-letters');
-const popup = document.getElementById('popup-container');
-const finalMessage = document.getElementById('final-message');
-const playBtn = document.getElementById('play-btn');
-const notification = document.getElementById('notification-container');
+const figurePart = document.querySelectorAll(".figure-part");
+const wrongLetters = document.querySelector(".wrongLetterContainer span");
+const wordEl = document.querySelector(".words");
+const popupContainer = document.getElementById("popupContainer");
+const playAgain = document.querySelector(".popupContainer button");
+const popMessage = document.querySelector(".popupContainer h3");
+const notification = document.getElementById("notification");
+const alpha = document.getElementById("alpha");
+wordsDatabase = ["application", "programming", "database", "science"];
+generateRandomWord();
+function generateRandomWord() {
+    selectedWord = wordsDatabase[Math.floor(Math.random() * wordsDatabase.length)]
+    // console.log(selectedWord);
+}
+console.log(selectedWord);
 
-// Get DOM Elements for Hangman
-const figureParts = document.querySelectorAll('.figure-part');
-
-// This is the pool of words which will be used to select a random word
-const words = ["scientist","song","built","word","spell","value","support","heavy","men","dead","bad","here","street","dream","eventually","original","broad","floating","daily","tool","swimming","mostly","escape","fourth","within","government","somewhere","means","fight","section","longer","clear","creature","situation","who","were","turn","table","sure","sugar","sister","wool"];
-// const words = ["bad","no"];
-
-// Select a word at random from words array
-let selectedWord = words[Math.floor(Math.random() * words.length)];
-
-// Tracking arrays for correct and incorrect guesses
-const correctLettersArray = [];
-const incorrectLettersArray = [];
-
-// Function to display the selectedWord in the DOM
+const correctedones = []
+const wrongones = [];
+displayWord();
 function displayWord() {
-    // Display the selected word
-    word.innerHTML = `
-        ${selectedWord
-            .split('')
-            .map(letter => `
-                <span class="letter" >
-                    ${correctLettersArray.includes(letter) ? letter : '' }
-                </span>
-                `
-            )
-            .join('')
-        }
-    `;
-
-    // Replace new line character and form inner word
-    const innerWord = word.innerText.replace(/\n/g, '');
-
-    // Compare inner word to selected word, if it's the same then game over and user won
-    if(innerWord === selectedWord) {
-        finalMessage.innerText = 'Congratulations! You won!'
-        popup.style.display = 'flex';
+    wordEl.innerHTML = selectedWord.split('').map(letter =>
+        `<span class="letters">${(correctedones.includes(letter) ? letter : ' ')
+        }</span>                   `
+    ).join('');
+    // console.log(wordEl.innerHTML)
+    actualWord = wordEl.innerText.replace(/\n/ig, ''); //to remove new line character
+    actualWord = actualWord.toLowerCase();
+    // console.log(actualWord + "This is actual word");
+    // console.log(selectedWord + "This is selected word");
+    // console.log(actualWord);
+    // console.log(selectedWord);
+    if (actualWord === selectedWord) {
+        popMessage.innerText = "Congratulation..You have won "
+        popupContainer.classList.add("add");
     }
 
-};
-
-// Function to show the notification
-function showNotification() {
-    // Add class show to the notification container
-    notification.classList.add('show');
-    // After 2 seconds, hide the notification
-    setTimeout(() => {
-        notification.classList.remove('show');
-    }, 2000);
 }
-
-// Function to update incorrect letters
-function updateIncorrectLetters() {
-    // Display the incorrect letters
-    incorrectLetters.innerHTML = `
-        ${incorrectLettersArray.length > 0 ? '<p>Incorrect letters</p>' : ''}
-        ${incorrectLettersArray.map(letter => `<span>${letter}</span>`)}
-    `;
-
-    // Display the hangman part
-    figureParts.forEach((part, index) => {
-        // How many incorrect letters has the user guessed
-        const errors = incorrectLettersArray.length;
-        if (index < errors) {
-            part.style.display = 'block';
-        } else {
-            part.style.display = 'none';
-        }
-    });
-
-    // Check if user lost
-    if(incorrectLettersArray.length === figureParts.length) {
-        finalMessage.innerText = 'You Lost!'
-        popup.style.display = 'flex';
+function displaywrong() {
+    wrongLetters.innerText = wrongones;
+    wrongones.forEach((element, index) => {
+        figurePart[index].style.display = 'flex'
+    })
+    if (wrongones.length === figurePart.length) {
+        popMessage.innerText = "Sorry..You have Lost "
+        popupContainer.classList.add("add");
+        // call play again function
     }
+
+
 }
 
-// Event Handlers
-// 1. Listen for keyboard key press
-window.addEventListener('keydown', e => {
-    // Check if key pressed is a letter a = 65 and z = 90
+//Event Key Capture
+window.addEventListener("keydown", e => {
+    //workflow
+    //get range of key A-z ,
+    //push correct and wrong letter to respective array 
+    //call display function for both  
+    // added bcz else if is not working
+    // show popmessage for repeated-pressed button
+
+    // to display/hide popup for repeated word
+    if (correctedones.includes(e.key)) {
+        notification.classList.add("show");
+        setTimeout(e =>
+            notification.classList.remove("show"), 1000)
+    }
+
+    // console.log(e.keyCode);
     if (e.keyCode >= 65 && e.keyCode <= 90) {
-        const letter = e.key;
-        // Check if letter is in the selected word
-        if (selectedWord.includes(letter)) {
-            // Check if letter is already in correctLettersArray
-            if (!correctLettersArray.includes(letter)) {
-                // Add letter into the correctLettersArray
-                correctLettersArray.push(letter);
-                // Run the displayWord function again to display new letter
-                displayWord();
-            } else {
-                showNotification();
-            }
+        if (selectedWord.includes(e.key)) {
+            correctedones.push(e.key);
+            displayWord();
+            // console.log(correctedones);
+        } else if (correctedones.includes(e.key)) {
+            // console.log("you have already");
+            notification.classList.add("show");
         } else {
-            // Check if letter is already in incorrectLettersArray
-            if(!incorrectLettersArray.includes(letter)) {
-                // Add letter into the incorrectLettersArray
-                incorrectLettersArray.push(letter);
-                // Update the incorrect letters UI
-                updateIncorrectLetters();
-            } else {
-                showNotification();
-            }
+            wrongones.push(e.key);
+            displaywrong();
         }
-    }
-});
 
-// 2. Listen for click on play again button
-playBtn.addEventListener('click', () => {
-    // Empty correctLettersArray & incorrectLettersArray
-    correctLettersArray.splice(0);
-    incorrectLettersArray.splice(0);
-    // Select a new random word
-    selectedWord = words[Math.floor(Math.random() * words.length)];
-    // Clear incorrect letters display
-    updateIncorrectLetters();
-    // Hide the popup
-    popup.style.display = 'none';
-    // refresh displayed word
-    displayWord();
+    }
+
+
 })
 
-// Execute displayWord on page load
-displayWord();
+//Event for playagain
+//play again fuction resetting everything
+
+playAgain.addEventListener('click', e => {
+    //first remove pupup
+
+    popupContainer.classList.remove("add");
+    //empty arrays
+    correctedones.splice(0);
+    wrongones.splice(0);
+    // generate new random word
+    generateRandomWord();
+    displaywrong();
+    displayWord();
+    // also remove the body display
+    figurePart.forEach((element, index) => {
+        figurePart[index].style.display = 'none'
+    })
+
+
+
+
+
+})
+
+
+    alpha.addEventListener('click', e => {
+
+        if (correctedones.includes(e.target.innerHTML)) {
+            notification.classList.add("show");
+            setTimeout(e =>
+                notification.classList.remove("show"), 1000)
+        }
+
+        if (e.target.classList.contains('button')) {
+
+            console.log(correctedones);
+            console.log(selectedWord);
+            if (selectedWord.includes(e.target.innerHTML)) {
+                console.log("Condition is True");
+                correctedones.push(e.target.innerHTML);
+                displayWord();
+            } else if (correctedones.includes(e.target.innerHTML)) {
+                notification.classList.add("show");
+            } else {
+                wrongones.push(e.target.innerHTML);
+                displaywrong();
+            }
+        }
+    })
