@@ -1,14 +1,3 @@
-//Steps
-//create variables
-//generate random word function
-//add word to dom function create and call
-//create event listerner
-//create updateScoreFunction
-//create start Count down variables
-//create update time function
-//create game over function
-//difficulty working start
-
 const word=document.getElementById('word');
 const text = document.getElementById('text');
 const scoreEl = document.getElementById('score');
