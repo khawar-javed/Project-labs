@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e2e2;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+header{
+    color: whitesmoke;
+    background-image: url(background2.jpg);
+    font-size: 100%;
+    padding: 40px 15px;
+    text-align: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+    
+}
+
+.filter-container {
+    margin-top: 20px;
+    width: 75vw;
+    max-width: 800px;
+}
+
+.filter {
+    width: 100%;
+    margin-top: 20px;
+    /* width: 75vw; */
+    max-width: 800px;
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    
+}
+
+.post {
+    position: relative;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    padding: 25px;
+    margin: 40px 0;
+    display: flex;
+    width: 75vw;
+    max-width: 800px;
+}
+
+.post-content {
+    margin-left: 25px;
+}
+
+
+.post-title {
+    margin: 0;
+}
+
+.post-body {
+    margin: 10px 0 0;
+    line-height: 1.5;
+}
+
+.post-id {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: #4C4B63;
+    border-radius: 50%;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    transition: opacity 0.5s ease-in;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+button.home {
+    cursor: pointer;
+    background-color: #e2e2e2;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 5px 15px rgba(49, 46, 46, 0.7);
+    color: black;
+    display: block;
+    font-size: 18px;
+    padding: 5px 100px 5px 100px;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.circle {
+    background-color: #4C4B63;
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    animation: bounce 0.6s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+    animation-delay: .2s;
+}
+
+.circle:nth-of-type(3) {
+    animation-delay: .4s;
+}
+
+@keyframes bounce {
+    0%,
+    50% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}

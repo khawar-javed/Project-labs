@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>News Feeds</title>
+</head>
+<body>
+    <header>
+            <h1>Social News Feeds</h1>
+            <a href="../index.html">
+                <button class="home">Home</button>
+            </a>
+    </header>
+    
+        <div class="filter-container">
+            <input type="text" class="filter" id="filter" placeholder="Type to Filter Content" />
+        </div>    
+    <!-- Section for News Feed Posts -->
+    <div class="news-feed-container" id="news-feed-container"></div>
+    <!-- This is the Loader to display animation while API is fetching data -->
+    <div class="loader" id="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
