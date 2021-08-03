@@ -1,55 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
 
-html, body {
-    margin: 0;
-    background:linear-gradient(to right,#0f0c29,#302b63,#24243e);
+html,
+body {
+  margin: 0;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 @keyframes blink {
-    0% { text-shadow: 0 0 15px red; }
-    50% { text-shadow: none; }
-    100% { text-shadow: 0 0 15px blue; }
+  0% {
+    text-shadow: 0 0 15px red;
+  }
+  50% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 15px blue;
+  }
 }
 
 @-webkit-keyframes blink {
-    0% { text-shadow: 0 0 15px orangered; }
-    50% { text-shadow: 0 0 0; }
-    100% { text-shadow: 0 0 15px blue; }
+  0% {
+    text-shadow: 0 0 15px orangered;
+  }
+  50% {
+    text-shadow: 0 0 0;
+  }
+  100% {
+    text-shadow: 0 0 15px blue;
+  }
 }
 
-.LandingPage{
-    font-family: 'Libre Baskerville', serif;
-    /* background: #282c34; */
-    background: url(./Project1/background2.jpg);
-    border-radius: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 92vw;
-    height: 85vh;
-    color: whitesmoke;
-    margin: auto;
-    margin-top: 4rem;
-    text-align: center;
-
-    
+.LandingPage {
+  font-family: "Libre Baskerville", serif;
+  /* background: #282c34; */
+  background: url(./Project1/background2.jpg);
+  border-radius: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 92vw;
+  height: 85vh;
+  color: whitesmoke;
+  margin: auto;
+  margin-top: 4rem;
+  text-align: center;
 }
 
-.List, a  {
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    text-decoration: none;
-    text-align: justify;
-    
+.List,
+a {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: justify;
 }
 h1 {
-    
-    text-shadow: 2px 2px 8px blue;
-    text-shadow: 0 0 3px greenyellow, 0 0 5px #0000FF;
+  text-shadow: 2px 2px 8px blue;
+  text-shadow: 0 0 3px greenyellow, 0 0 5px #0000ff;
 
-    -webkit-animation: blink 5.0s linear infinite;
-    -moz-animation: blink 5.0s linear infinite;
-    -ms-animation: blink 5.0s linear infinite;
-    -o-animation: blink 5.0s linear infinite;
-    animation: blink 5.0s linear infinite;
-
+  -webkit-animation: blink 5s linear infinite;
+  -moz-animation: blink 5s linear infinite;
+  -ms-animation: blink 5s linear infinite;
+  -o-animation: blink 5s linear infinite;
+  animation: blink 5s linear infinite;
 }
